@@ -33,5 +33,4 @@ def test(a, b):
     sb.setDistanceFct(c_distance)
 
     f(sa[0], sb[0])
-    f(sb[0], sa[0])
 
