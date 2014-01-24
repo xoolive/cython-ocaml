@@ -10,9 +10,8 @@ cdef extern from "wrapper.h":
         double distance(Wrapper)
     cdef void f(Wrapper, Wrapper)
 
-# This is the interesting part of the snippet
-# ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-
+# This is the interesting part of the snippet: Python callback; we just check
+# the `distance` method is implemented
 cdef double c_distance(void* pta, void* ptb) :
   cdef object a = <object>(pta)
   cdef object b = <object>(ptb)
@@ -20,8 +19,6 @@ cdef double c_distance(void* pta, void* ptb) :
   assert("distance" in dir(b))
   cdef double dst = <double>a.distance(b)
   return dst
-
-# End of the interesting part
 
 def test(a, b):
     """ Call function test on two objects implementing the method distance. """

@@ -5,8 +5,8 @@ class Wrapper
 
 private:
   void* mydata;
-  double(*mydistance)(void*, void*);
-  int idx;
+  double (*mydistance)(void*, void*);
+  int idx; // useless
 
 public:
   Wrapper(void* data) : mydata(data), mydistance(NULL) {}

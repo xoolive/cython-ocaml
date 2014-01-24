@@ -8,6 +8,10 @@ extern "C" {
 
 static value* closure_f = NULL;
 
+/*
+ * The type definition in `mlwrapper.ml` ensures the call to caml_callback2 is
+ * valid and properly typed
+ */
 double c_distance (void* pta, void* ptb) {
   value* v_a = (value*) pta;
   value* v_b = (value*) ptb;
