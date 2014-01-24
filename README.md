@@ -53,7 +53,7 @@ If you want to use the `f` algorithm in C++, you only build a nicer interface,
 or just stick to the `Wrapper` thing.
 
 ----
-## For Python/Cython:
+### For Python/Cython:
 
 When wrapping the `f` algorithm in cython (becomes `pywrapper.test`), we write
 the `pywrapper.pyx` to describe the interface. The part of interest is the
