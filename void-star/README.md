@@ -1,4 +1,4 @@
-## A proposition of interface for wrapping "complex" C++ code
+## Use C/C++ to apply f·x, when f and x are objects in an other language
 
 Let's say you have some smart algorithm requiring a specific data model which
 is anything but relevant to the user. However, this data model shall wrap user
@@ -90,8 +90,6 @@ converted to regular `double` from `C`.
 Compile the library `wrapper.cmxa`, compile the test and execute it:
 
 > Cool fact: you can replace g++ by your favourite (Intel?) compiler!
-
-> Less cool fact: do not try with Python if you want to sleep early tonight.
 
     g++ -c wrapper.cpp
     ocamlopt -cc "g++" -c mlcwrapper.c
